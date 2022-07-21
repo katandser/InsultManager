@@ -9,8 +9,7 @@ import kotlin.random.Random
 
 class MainActivityViewModel : ViewModel(), KoinComponent {
 
-    val repository = ServerRepository(ServerApi.create())
-
+    private val repository = ServerRepository(ServerApi.create())
     val insult = MutableLiveData<DTOInsult>()
 
     fun getInsult() {
